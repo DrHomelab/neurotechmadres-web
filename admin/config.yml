@@ -1,0 +1,38 @@
+backend:
+  name: github
+  repo: DrHomelab/neurotechmadres-web  # Cambia a tu username/repo real, ej. ana123/neurotechmadres-web
+  branch: main
+
+media_folder: "images"  # Carpeta para subir imágenes
+public_folder: "/images"
+
+collections:
+  - name: "posts"
+    label: "Posts"
+    folder: "posts"
+    create: true
+    fields:
+      - {label: "Título", name: "title", widget: "string"}
+      - {label: "Contenido", name: "body", widget: "markdown"}
+      - {label: "Fecha", name: "date", widget: "datetime"}
+
+  - name: "videos"
+    label: "Videos"
+    folder: "videos"
+    create: true
+    fields:
+      - {label: "Título", name: "title", widget: "string"}
+      - {label: "Descripción", name: "body", widget: "markdown"}  # Aquí pones embeds/links de YT
+      - {label: "URL de Video", name: "video_url", widget: "string"}
+      - {label: "Fecha", name: "date", widget: "datetime"}
+
+  - name: "apps"
+    label: "Apps"
+    folder: "apps"
+    create: true
+    fields:
+      - {label: "Nombre de App", name: "title", widget: "string"}
+      - {label: "Reseña", name: "body", widget: "markdown"}  # Incluye links affiliates
+      - {label: "Imagen", name: "image", widget: "image"}
+
+  # Añade más como "tips" o "libros" similarmente
